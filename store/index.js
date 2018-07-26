@@ -1,17 +1,10 @@
-import {createStore} from "redux";
-import reducer from "./reducer";
+import { createStore, combineReducers } from 'redux'
+import { settings } from './reducers'
 
-export const makeStore = (initialState) => {
+const rootReducer = combineReducers({
+  settings
+})
 
-    const store = createStore(reducer, initialState);
-
-    if (module.hot) {
-        module.hot.accept('./reducer', () => {
-            console.log('Replacing reducer');
-            store.replaceReducer(require('./reducer').default);
-        });
-    }
-
-    return store;
-
-};
+export default (initialState, options) => {
+    return createStore(rootReducer, initialState);
+}

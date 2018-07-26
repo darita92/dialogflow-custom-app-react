@@ -27,6 +27,8 @@
     "raw-loader": "^0.5.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
     "sass-loader": "^7.0.3",
     "styled-jsx-plugin-sass": "^0.2.4"
   }
